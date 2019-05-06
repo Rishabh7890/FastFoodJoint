@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // set up templating engine
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine("handlebars", hbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // turn on routes
