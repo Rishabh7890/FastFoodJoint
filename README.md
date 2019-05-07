@@ -20,8 +20,6 @@ This project is a full stack application that allows you to place an order for a
 ## Credits
 - Rishabh Goel 
 
-![Gargantuan.FM Gif 2](https://github.com/alexrosenkranz/gargantuanfm/blob/master/readme_pics/gif2.gif)
-
 ## Upcoming Improvements
 
 - Allow for deleting burgers all together off the list 
