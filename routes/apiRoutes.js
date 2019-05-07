@@ -3,6 +3,7 @@ const burger = require("../models/burger");
 
 // export routes
 module.exports = app => {
+  
   // GET route to retrieve all burgers in db 
   app.get("/api/burgers", function(req, res) {
     burger.findAll()

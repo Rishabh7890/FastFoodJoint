@@ -34,7 +34,7 @@ $("#burger-form").on("submit", function(event) {
       url: `/api/burgers/${burgerId}`,
       method: "PUT",
       data: {
-        devoured: devoured
+        devoured: parseInt(devoured)
       }
     }).then(() => location.reload())
       .catch(err => console.log(err));
