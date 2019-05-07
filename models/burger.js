@@ -31,7 +31,7 @@ const update = (devValue, burgerId) => {
     devValue = (devValue === "true") ?
      true : false;
 
-    connection.query("UPDATE burgers SET devoured = 1 WHERE id = ?", [burgerId], function(err, dbBurgers) {
+    connection.query("UPDATE burgers SET devoured = ? WHERE id = ?", [devValue, burgerId], function(err, dbBurgers) {
       if(err) {
         return reject(err);
       } else if (dbBurgers.affectedRows === 0) {
@@ -44,6 +44,7 @@ const update = (devValue, burgerId) => {
     });
   });
 };
+
 
 module.exports = {
   findAll,

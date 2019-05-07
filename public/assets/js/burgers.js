@@ -39,4 +39,22 @@ $("#burger-form").on("submit", function(event) {
     }).then(() => location.reload())
       .catch(err => console.log(err));
   });
+
+  $(".another-burger").on("click", function() {
+
+    const burgerId = $(this).attr("data-id")
+    const devoured = $(this).attr("data-devoured")
+
+    // update burger so that it changes boolean value of devoured from false to true
+    $.ajax({
+      url: `/api/burgers/${burgerId}`,
+      method: "PUT",
+      data: {
+        devoured: parseInt(devoured)
+      }
+    }).then(() => location.reload())
+      .catch(err => console.log(err));
+  });
+
+
 });
