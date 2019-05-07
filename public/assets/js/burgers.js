@@ -6,7 +6,7 @@ $("#burger-form").on("submit", function(event) {
     event.preventDefault();
 
     const burgerData = {
-      burger_name : $("#name-input").val().trim()
+      burger_name: $("#name-input").val().trim()
     }
 
     // use input to add the new burger
