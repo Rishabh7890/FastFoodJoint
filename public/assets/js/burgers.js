@@ -26,8 +26,8 @@ $("#burger-form").on("submit", function(event) {
   
   $(".eat-burger").on("click", function() {
 
-    const burgerId = $(this).attr("data-id");
-    const devoured = $(this).attr("data-devoured");
+    const burgerId = $(this).attr("data-id")
+    const devoured = $(this).attr("data-devoured")
 
     // update burger so that it changes boolean value of devoured from false to true
     $.ajax({

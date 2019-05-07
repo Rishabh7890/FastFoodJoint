@@ -4,7 +4,7 @@ const connection = require("./connection");
 // use the findAll function to retrieve all burgers currently in db
 const findAll = () => {
   return new Promise((resolve, reject) => {
-    connection.query("SELECT * FROM burger", function(err, dbBurgers) {
+    connection.query("SELECT * FROM burgers", function(err, dbBurgers) {
       if(err) {
         return reject(err);
       }
@@ -16,7 +16,7 @@ const findAll = () => {
 // use the create function to add a new burger
 const create = burgerDataObj => {
   return new Promise((resolve, reject) => {
-    connection.query("INSERT INTO burger SET ?", [burgerDataObj], function(err, dbBurgers) {
+    connection.query("INSERT INTO burgers SET ?", [burgerDataObj], function(err, dbBurgers) {
       if(err) {
         return reject(err);
       }
@@ -31,7 +31,7 @@ const update = (devValue, burgerId) => {
     devValue = (devValue === "true") ?
      true : false;
 
-    connection.query("UPDATE burger SET devoured = ? WHERE id = ?", [burgerId], function(err, dbBurgers) {
+    connection.query("UPDATE burgers SET devoured = ? WHERE id = ?", [burgerId], function(err, dbBurgers) {
       if(err) {
         return reject(err);
       } else if (dbBurgers.affectedRows === 0) {
